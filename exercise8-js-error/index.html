@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        onerror = unhandled;
+        function unhandled(msg, url, line) {
+            alert("error occured")
+        }
+
+        function add() {
+            alert($("#int1").val() + $("#int2").val())
+        }
+
+        function divide() {
+            if(isNaN($("#int1").val()) || $("#int2").val()){
+                throw("one or more...")
+            }
+            alert($("#int1").val() / $("#int2").val())
+        }
+    </script>
+    <input type="text" id="int1">
+    <input type="text" id="int2">
+    <input type="button" value="Add" onclick="add();">
+    <input type="button" value="Divide" onclick="divide();">
+</body>
+
+</html>

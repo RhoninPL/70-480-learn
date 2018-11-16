@@ -1,0 +1,28 @@
+<html>
+
+<head></head>
+
+<body>
+    <style>
+        .divs {
+            /* column-count: 3; */
+            columns: 150px 3;
+            column-gap: 30px;
+            column-rule: 1px dotted #ff00ff;
+            column-fill: balance;
+            height: 500px;
+        }
+
+        .divs :first-child {
+            column-span: all;
+        }
+    </style>
+    <div class="divs">
+        <div style="background-color: darkblue; height: 200px"><h2>Columns</h2></div>
+        <div style="background-color: red; height: 100px"></div>
+        <div style="background-color: lawngreen; height: 100px"></div>
+        <div style="background-color: blueviolet; height: 150px"></div>
+    </div>
+</body>
+
+</html>

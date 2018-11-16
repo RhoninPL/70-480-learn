@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <table id="fruitTable">
+            <tr>
+                <th>Fruit</th>
+                <th>Inventory</th>
+            </tr>
+        </table>
+        <script>
+        var jsonFruit = {
+            "apples": "12",
+            "bananas": "8",
+            "watermelon": "3"
+        }
+
+        $.each(jsonFruit, function (key, value) {
+            $("<tr><td>" + key + "</td><td>" + value + "</td></tr>")
+            .appendTo("#fruitTable");
+        });
+        </script>
+    </body>
+</html>

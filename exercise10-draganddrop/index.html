@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <style>
+        div,
+        img {
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("byleco", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("byleco");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <div id="imagedrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="imagedrop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <img draggable="true" ondragstart="drag(event)" src="https://ih0.redbubble.net/image.327193784.2515/flat,550x550,075,f.u3.jpg"
+        alt="" id="imagedrag">
+
+</body>
+
+</html>

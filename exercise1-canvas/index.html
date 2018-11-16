@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <h1 style="color: red">hello world</h1>
+        <script>
+        document.write("test");
+        </script>
+        <canvas id="myCanvas" width="200" height="100"
+        style="border:1px solid #c3c3c3;">
+        Your browser does not support the canvas element.
+        </canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            // var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0,0,150,75);
+            ctx.font = "50px Georgia";
+            ctx.fillStyle = "#000";
+            ctx.fillText("text1", 0, 50);
+            ctx.scale(111,111);
+        </script>
+    </body>
+</html>

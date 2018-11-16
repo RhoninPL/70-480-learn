@@ -1,0 +1,19 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var i = 0;
+        function ClickMe(event) {
+            // event.preventDefault();
+            // document.write("kliknales mnie!");
+            event.innerText = "Kliknales mnie! " + ++i + " razy";
+        }
+    </script>
+    <h1 style="color: red">hello world</h1>
+    <button type="button" onclick="ClickMe(this)">Kliknij mnie</button>
+
+</body>
+
+</html>
